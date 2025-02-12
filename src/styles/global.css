@@ -20,7 +20,7 @@ h1 {
   font-size: 2.5rem;
 }
 
-/* nav/Hamburger styles */
+/* hamburger/nav styles */
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
@@ -34,7 +34,8 @@ h1 {
   background-color: #ff9776;
 }
 
-/* nav styles  */
+/* nav styles */
+
 .nav-links {
   width: 100%;
   top: 5rem;
@@ -75,15 +76,10 @@ h1 {
     display: inline-block;
     padding: 15px 20px;
   }
-/* nav/hamburger styles */
+/* 
+  hamburger style */
+
   .hamburger {
     display: none;
   }
 }
-
-
-
-
-
-
-
