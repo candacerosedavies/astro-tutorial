@@ -1,0 +1,41 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+// Don't need the below as they are all imported with BaseLayout
+// import "../styles/global.css";
+// import Footer from "../components/Footer.astro";
+// import Header from "../components/Header.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<html>
+  <head>
+    <!-- ... -->
+
+    <!-- // no longer added by default. When using the frontmatter layout property, you must include the <meta charset="utf-8"> tag in your layout as Astro will no longer add it automatically. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <BaseLayout pageTitle={frontmatter.title}>
+      <!-- dont need this as imported the baseLayout and wrapped this block of code in its tags -->
+      <!-- <Header /> -->
+      <img
+        src={frontmatter.image.url}
+        width="300"
+        alt={frontmatter.image.alt}
+      />
+      <!-- dont need this as it's in the <BaseLayout component!
+      <h1>{frontmatter.title}</h1> -->
+      <p>Published on: {frontmatter.pubDate.toString().slice(0, 10)}</p>
+      <p>Written by {frontmatter.author}</p>
+      <p>{frontmatter.description}</p>
+      <slot />
+      <!-- dont need this as imported the baseLayout and wrapped this block of code in its tags -->
+      <!-- <Footer /> -->
+    </BaseLayout>
+  </body>
+  <!-- ... -->
+</html>

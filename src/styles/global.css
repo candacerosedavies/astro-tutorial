@@ -1,7 +1,8 @@
 html {
-  background-color: #f1f5f9;
-  font-family: sans-serif;
+  background-color: #497D74;
+  font-family: "Roboto", serif;
 }
+
 
 body {
   margin: 0 auto;
@@ -9,7 +10,19 @@ body {
   max-width: 80ch;
   padding: 1rem;
   line-height: 1.5;
+  color: #EFE9D5;
+  font-size: 1.2rem;
 }
+
+
+/* @font-face {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
 
 * {
   box-sizing: border-box;
@@ -18,9 +31,52 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+  color: #F7CFD8;
 }
 
-/* hamburger/nav styles */
+footer styles
+.footer-body {
+  min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+.footer-style {
+  @media (min-width: 245px){
+  /* //even space between elements. THIS IS THE ONE */
+  justify-content: space-evenly;
+  /* the axis goes from left to right. */
+  display: flex;
+  align-self: center;
+ flex-basis: 5%;
+  gap: 10%;
+  color: #27445D;
+   top: 5em;
+  }
+}
+
+.footer-style a {
+  text-align: center;
+  padding: 0.5em 0.8em;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight:500;
+  color: #234058;
+
+}
+
+.footer-style a:hover, a:focus {
+  color: #27445D;
+ background-color: #EFE9D5;
+  top: 2em;
+  left: 48px;
+  display: flex;
+  margin: 0;
+  font-optical-sizing: auto;
+}
+
+/* nav styles */
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
@@ -31,7 +87,7 @@ h1 {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #ff9776;
+  background-color: #27445D;
 }
 
 /* nav styles */
@@ -40,23 +96,26 @@ h1 {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #ff9776;
+  /* background-color: #27445D; */
   display: none;
   margin: 0;
+  color: #27445D;
 }
 
 .nav-links a {
   display: block;
   text-align: center;
-  padding: 10px 0;
+  /* padding: 2em 0; */
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: #EFE9D5;
 }
 
 .nav-links a:hover, a:focus {
-  background-color: #ff9776;
+ color: #27445D;
+ background-color: #F7CFD8;
 }
 
 .expanded {
@@ -65,21 +124,23 @@ h1 {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
+    justify-content: space-evenly;
+    display: flex;
+    align-self: center;
+    /* position: static; */
     width: auto;
     background: none;
+    color: #EFE9D5;
   }
 
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
+    padding: 1.5em 0.8em;
+    color: #EFE9D5;
   }
-/* 
-  hamburger style */
 
   .hamburger {
+    /* hides an element.*/
     display: none;
   }
 }
